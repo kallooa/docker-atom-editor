@@ -33,7 +33,7 @@ RUN apt-get update && \
     dpkg -i /tmp/atom.deb && \
     rm -f /tmp/atom.deb && \
     useradd -d /home/atom -m atom &&
-    sudo apt-get install -y npm ruby-full r-base python3 golang-go
+    sudo apt-get install -y python3 golang-go
 
 USER atom
 
