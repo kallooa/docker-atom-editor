@@ -32,7 +32,8 @@ RUN apt-get update && \
     curl -L https://github.com/atom/atom/releases/download/${ATOM_VERSION}/atom-amd64.deb > /tmp/atom.deb && \
     dpkg -i /tmp/atom.deb && \
     rm -f /tmp/atom.deb && \
-    useradd -d /home/atom -m atom
+    useradd -d /home/atom -m atom &&
+    sudo apt-get install -y npm ruby-full r-base python3 golang-go
 
 USER atom
 
